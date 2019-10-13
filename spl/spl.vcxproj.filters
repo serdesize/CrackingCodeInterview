@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="linkedlist.h">
+      <Filter>ds\linkedlist</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>ext</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>ext</Filter>
+    </ClInclude>
+    <ClInclude Include="hastable.h">
+      <Filter>ds\hashtable</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp">
+      <Filter>ext</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ds">
+      <UniqueIdentifier>{566b1bfe-d527-4ac4-b63d-e950c8839a86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ds\linkedlist">
+      <UniqueIdentifier>{3e034634-acd8-459a-a0a8-5a8253b1066d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext">
+      <UniqueIdentifier>{80cb0e39-687f-4f63-ac77-8c1d763fef2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ds\tree">
+      <UniqueIdentifier>{8b1919ec-674f-4f92-a7e2-242410c60ce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ds\tries">
+      <UniqueIdentifier>{263fd16b-f4f5-4f65-8f52-cf29db003a09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ds\graphs">
+      <UniqueIdentifier>{c7ab659c-caf8-472a-8b8c-ada661796d6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ds\stack">
+      <UniqueIdentifier>{6694f9da-b1d1-44ab-a574-009b0d32b275}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ds\queue">
+      <UniqueIdentifier>{9fecbf57-530b-4882-9e12-df066cb11d68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ds\heap">
+      <UniqueIdentifier>{907965b1-e659-4338-9ef0-e7b908f563bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ds\vector">
+      <UniqueIdentifier>{d8c136b1-e2f9-498a-bd46-3c8e99b73149}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ds\hashtable">
+      <UniqueIdentifier>{46d33c31-b5cf-4a41-926e-03307ab6e15e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
