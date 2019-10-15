@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KrakenCodInt", "KrakenCodInt.vcxproj", "{3B2C0B22-C8AB-4FAD-B699-30B548CEE5C7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spl", "spl\spl.vcxproj", "{C9D0FEB3-15D0-45B6-B412-81395DB37749}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spl", "..\spl\spl.vcxproj", "{C9D0FEB3-15D0-45B6-B412-81395DB37749}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

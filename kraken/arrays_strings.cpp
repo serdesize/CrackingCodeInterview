@@ -334,7 +334,48 @@ void Chap1::q3()
 
 void Chap1::q4()
 {
+	bool res = false;
+	std::unordered_map<char, int> charMap;
 
+	// input should be all to lower case
+	const char in[] = "tacti coa";
+
+	for (int i = 0; i < sizeof(in) / sizeof(char); i++)
+	{
+		char car = in[i];
+		if (car == ' ')
+		{
+			continue;
+		}
+
+		auto got = charMap.find(car);
+		if (got == charMap.end())
+		{
+			charMap.emplace(car, 1);
+		}
+		else
+		{
+			charMap[car] = (got->second++);
+		}
+	}
+
+	bool foundUnevenNumber = true;
+	for (auto c : charMap)
+	{
+		if (c.second % 2 == 0)
+			continue;
+
+		if (!foundUnevenNumber)
+		{
+			foundUnevenNumber = true;
+		}
+		else
+		{
+			res = false;
+		}
+	}
+
+	assert(!res);
 
 	std::cout << "[ SUCCESS ] q4 : palindrome permutation" << std::endl;
 }
@@ -412,9 +453,9 @@ void Chap1::q7()
 	const int rows = 4, columns = 3;
 	const int data[rows][columns] =
 	{
-		1,   2,   3,   
-		4,   5,   6,   
-		7,   8,   9,   
+		1,   2,   3,
+		4,   5,   6,
+		7,   8,   9,
 		10,  11,  12,
 	};
 
@@ -441,7 +482,23 @@ void Chap1::q7()
 
 void Chap1::q8()
 {
+	const int rows = 4, columns = 3;
+	const int data[rows][columns] =
+	{
+		1,   2,   3,
+		4,   5,   6,
+		7,   8,   0,
+		10,  11,  12,
+	};
 
+	for (int i = 0; i < rows; i++)
+		for (int j = 0; j < columns; j++)
+		{
+			if (data[i][j] == 0)
+			{
+
+			}
+		}
 }
 
 void Chap1::q9()
