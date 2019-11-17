@@ -1,6 +1,18 @@
 #pragma once
 
-namespace ds 
+/***************************************************************************************************************************
+ * Time Complexity -- LinkedList information  
+ * Access : O(N)
+ * Search : O(N)
+ * Insert : O(1)
+ * Delete : O(1)
+ *
+ * My implementation for delete and insert @ index, thus it need to traverse the linked list so it would be O(n) for both
+ * actions. The worst case for all actions is O(N), but normally we should have insert and delete O(1)
+ ***************************************************************************************************************************
+ */
+
+namespace ds
 {
 	using uint = unsigned int;
 

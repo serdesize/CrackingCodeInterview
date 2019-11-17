@@ -10,7 +10,7 @@
     <ClInclude Include="framework.h">
       <Filter>ext</Filter>
     </ClInclude>
-    <ClInclude Include="hastable.h">
+    <ClInclude Include="hashtable.h">
       <Filter>ds\hashtable</Filter>
     </ClInclude>
   </ItemGroup>

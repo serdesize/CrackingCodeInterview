@@ -156,7 +156,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
-    <ClInclude Include="hastable.h" />
+    <ClInclude Include="hashtable.h" />
     <ClInclude Include="linkedlist.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>

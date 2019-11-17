@@ -382,6 +382,17 @@ void Chap1::q4()
 
 void Chap1::q5()
 {
+	// if length delta is more than 2 = fail
+	// first discrepency is ok anything different after should be
+
+	const char* inputs[] = { "pale", "pales", "pale", "pale" };
+	const char* inputs2[] = { "ple", "pale", "bale", "bake" };
+
+	for (auto i = 0; i < 4; i++) 
+	{
+		//auto input = inputs[0];
+		//for (auto j = 0; j < sizeof(input) /)
+	}
 
 	std::cout << "[ SUCCESS ] q5 : one way" << std::endl;
 }
