@@ -158,8 +158,12 @@
     <ClCompile Include="KrakenCodInt.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algo_ThreeSum.h" />
     <ClInclude Include="arrays_strings.h" />
     <ClInclude Include="Runner.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="algo_tests.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

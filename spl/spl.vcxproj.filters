@@ -13,6 +13,15 @@
     <ClInclude Include="hashtable.h">
       <Filter>ds\hashtable</Filter>
     </ClInclude>
+    <ClInclude Include="heap.h">
+      <Filter>ds\heap</Filter>
+    </ClInclude>
+    <ClInclude Include="bst.h">
+      <Filter>ds\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="node.h">
+      <Filter>ds\tree</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />

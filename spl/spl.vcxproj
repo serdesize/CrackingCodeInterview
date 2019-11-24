@@ -155,9 +155,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="bst.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="hashtable.h" />
+    <ClInclude Include="heap.h" />
     <ClInclude Include="linkedlist.h" />
+    <ClInclude Include="node.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>

@@ -16,5 +16,9 @@
       <Filter>chapter_1</Filter>
     </ClInclude>
     <ClInclude Include="Runner.h" />
+    <ClInclude Include="Algo_ThreeSum.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="algo_tests.txt" />
   </ItemGroup>
 </Project>

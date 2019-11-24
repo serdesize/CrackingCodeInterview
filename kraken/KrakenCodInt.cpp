@@ -6,9 +6,12 @@
 #include <stdio.h>
 #include <string>
 
+#include "arrays_strings.h"
 #include "linkedlist.h"
 #include "hashtable.h"
-#include "arrays_strings.h"
+#include "bst.h"
+
+#include "Algo_ThreeSum.h"
 
 void test_linkedlist() 
 {
@@ -56,10 +59,32 @@ void test_hashtable()
 	assert(aylin2 == nullptr);
 }
 
+void test_binarysearchtree() 
+{
+	ds::bstree<int> bst;
+	bst.add(1);
+	bst.add(9);
+	bst.add(6);
+	bst.add(4);
+	bst.add(5);
+	bst.add(8);
+	bst.add(2);
+	bst.add(3);
+	bst.add(7);
+
+	auto node = bst.find(2);
+	assert(node->get_Data() == 2);
+}
+
 int main()
 {
+	vector<int> vec = { 1, 1, -2 };
+	ThreeSum test;
+	test.threeSum(vec);
+
 	test_linkedlist();
 	test_hashtable();
+	test_binarysearchtree();
 
 
 	Chap1 chap1;

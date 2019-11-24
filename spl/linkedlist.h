@@ -1,5 +1,7 @@
 #pragma once
 
+#include "node.h"
+
 /***************************************************************************************************************************
  * Time Complexity -- LinkedList information  
  * Access : O(N)
@@ -17,55 +19,10 @@ namespace ds
 	using uint = unsigned int;
 
 	template <class T>
-	class node
-	{
-	private:
-		node* myNextNode;
-		T myData;
-
-	public:
-		node(T aData, node* aNextNode = nullptr)
-			: myData(aData)
-			, myNextNode(aNextNode)
-		{ }
-
-		~node() { myNextNode = nullptr; }
-
-		node* getNextNode() const
-		{
-			return myNextNode;
-		}
-
-		/// -------------------------------------------------------------------
-		/// note: 
-		/// return: true if able to set the new generic element, false otherwise
-		/// -------------------------------------------------------------------
-		bool setNextNode(node* aNode) noexcept
-		{
-			if (aNode == nullptr)
-				return false;
-
-			myNextNode = aNode;
-			return true;
-		}
-		/// -------------------------------------------------------------------
-	
-		/// -------------------------------------------------------------------
-		/// note:
-		/// return:
-		/// -------------------------------------------------------------------
-		T getData() const noexcept
-		{
-			return myData;
-		}
-		/// -------------------------------------------------------------------
-	};
-
-	template <class T>
 	class linkedlist
 	{
 	private:
-		node<T>* root;
+		node::node<T>* root;
 
 	public:
 		linkedlist()
@@ -85,16 +42,16 @@ namespace ds
 
 			uint counter = 0;
 			auto previous = root;
-			auto node = root->getNextNode();
+			auto node = root->get_LeftNode();
 			while ( node != nullptr )
 			{
 				if (aIndex == counter)
 				{
-					return previous->setNextNode( new ds::node<int>( aData, node ) );
+					return previous->set_LeftNode( new node::node<int>( aData, node ) );
 				}
 
 				previous = node;
-				node = node->getNextNode();
+				node = node->get_LeftNode();
 
 				counter++;
 			}
@@ -117,7 +74,7 @@ namespace ds
 		{
 			if ( root == nullptr )
 			{
-				root = new node<T>( aData );
+				root = new node::node<T>( aData );
 				return true;
 			}
 
@@ -125,22 +82,22 @@ namespace ds
 			if ( pos == PositionInsert::Beginning )
 			{
 				auto tmpNode = root;
-				root = new node<T>( aData );
-				root->setNextNode( tmpNode );
+				root = new node::node<T>( aData );
+				root->set_LeftNode( tmpNode );
 				
 				return true;
 			}
 
 			// add node to tail
 			auto previous = root;
-			auto node = root->getNextNode();
+			auto node = root->get_LeftNode();
 			while (node != nullptr)
 			{
 				previous = node;
-				node = node->getNextNode();
+				node = node->get_LeftNode();
 			}
 
-			previous->setNextNode(new ds::node<T>( aData ));
+			previous->set_LeftNode(new node::node<T>( aData ));
 
 			return true;
 		}
@@ -155,17 +112,17 @@ namespace ds
 			if ( root == nullptr )
 				return false;
 
-			auto node = root->getNextNode();
+			auto node = root->get_LeftNode();
 			while( node != nullptr )
 			{
 				// this is probably wrong because the address might be right
 				// but maybe the memory is different
-				if ( node->getData() == aData )
+				if ( node->get_Data() == aData )
 				{
 					return true;
 				}
 
-				node = node->getNextNode();
+				node = node->get_LeftNode();
 			}
 
 			return false;
@@ -183,13 +140,13 @@ namespace ds
 
 			if ( index == 0 ) 
 			{
-				root = root->getNextNode();
+				root = root->get_LeftNode();
 				return true;
 			}
 
 			int count = 0;
 			auto node = root;
-			auto nextNode = root->getNextNode();
+			auto nextNode = root->get_LeftNode();
 
 			while ( count < index )
 			{
@@ -197,11 +154,11 @@ namespace ds
 
 				if ( count == index )
 				{
-					return node->setNextNode( nextNode->getNextNode() );
+					return node->set_LeftNode( nextNode->get_LeftNode() );
 				}
 
 				node = nextNode;
-				nextNode = node->getNextNode();
+				nextNode = node->get_LeftNode();
 
 				if ( nextNode == nullptr ) 
 				{
