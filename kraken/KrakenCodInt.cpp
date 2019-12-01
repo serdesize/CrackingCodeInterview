@@ -12,6 +12,9 @@
 #include "bst.h"
 
 #include "Algo_ThreeSum.h"
+#include "LargestRectangleHistogram.h"
+#include "RegularExpressisonMatchMaking.h"
+#include "MostPeopleAlive.h"
 
 void test_linkedlist() 
 {
@@ -78,9 +81,32 @@ void test_binarysearchtree()
 
 int main()
 {
-	vector<int> vec = { 1, 1, -2 };
-	ThreeSum test;
-	test.threeSum(vec);
+	//vector<int> vec = { 1, 1, -2 };
+	//ThreeSum testThreeSum;
+	//testThreeSum.threeSum(vec);
+
+	//vector<int> vecTest1 = { 2, 1, 2 };
+	//LargestRectangleHistogram testLargestRectangleHistogram;
+	//testLargestRectangleHistogram.largestRectangleArea(vecTest1);
+
+	//RegularExpressionMatchMaking exp;
+	//auto match = exp.isMatch("aaaaaaaaaaaaaaaaaaaab", "a.*b");
+
+	People p1(1900, 2000);
+	People p2(1950, 2050);
+	People p3(1938, 1985);
+	People p4(1910, 1965);
+	People p5(1936, 2019);
+	People p6(1960, 2007);
+	People p7(1956, 2015);
+	People p8(1922, 1999);
+	People p9(1901, 2001);
+	People p10(1950, 1975);
+
+	vector<People> peeps = { p1, p2, p3, p4, p5, p6, p7, p8, p9, p10 };
+
+	MostPeopleAlive mostPeopleAlive;
+	auto daYear = mostPeopleAlive.YearWithMostPeople(peeps);
 
 	test_linkedlist();
 	test_hashtable();
